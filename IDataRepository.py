@@ -7,7 +7,7 @@ class IDataRepository():
     """
     
     @abstractmethod
-    def Connect(self, configuration: str, timeOut: int) -> bool: raise NotImplementedError
+    def Connect(self, *configuration, timeOut: int) -> bool: raise NotImplementedError
 
     @abstractmethod
     def Disconnect(self) -> bool: raise NotImplementedError
