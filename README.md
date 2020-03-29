@@ -1,0 +1,1 @@
+# SoSI.Crawler.Interfaces.IDataRepository
