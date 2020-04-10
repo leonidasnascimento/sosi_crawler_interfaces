@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="SoSI.Crawler.Interfaces.IDataRepository", 
+    name="SoSI_Crawler_Interfaces_IDataRepository", 
     version="0.0.1",
     author="SoSI",
     author_email="contato@sosi.com.br",
