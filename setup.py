@@ -4,14 +4,14 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="SoSI_Crawler_Interfaces_IDataRepository", 
-    version="0.0.1",
+    name="sosi_crawler_interfaces_datarepository", 
+    version="0.0.2",
     author="SoSI",
     author_email="contato@sosi.com.br",
     description="Interface that represents the commom behaviors of a data repository class",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/leonidasnascimento/SoSI.Crawler.Interfaces.IDataRepository",
+    url="https://github.com/leonidasnascimento/sosi_crawler_interfaces_datarepository",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",

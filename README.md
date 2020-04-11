@@ -1,1 +1,1 @@
-# SoSI.Crawler.Interfaces.IDataRepository
+# sosi_crawler_interfaces_datarepository

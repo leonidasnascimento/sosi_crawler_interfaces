@@ -3,10 +3,7 @@ class IDataRepository():
     """
     Commom interface that describes a Data Repository class operarion
     """
-
-    def __init__(self):
-        pass
-    
+        
     @abstractmethod
     def Connect(self, *configuration) -> bool: raise NotImplementedError
     """
