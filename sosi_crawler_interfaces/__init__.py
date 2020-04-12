@@ -1,1 +1,4 @@
 from sosi_crawler_interfaces.IDataRepository import IDataRepository
+from sosi_crawler_interfaces.IConfiguration import IConfiguration
+from sosi_crawler_interfaces.IException import IException
+from sosi_crawler_interfaces.ILogging import ILogging
