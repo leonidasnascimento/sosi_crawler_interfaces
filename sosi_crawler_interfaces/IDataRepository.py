@@ -30,6 +30,7 @@ class IDataRepository():
                         Its type depends on the command 
                         type expected by the target date 
                         repository abstraction
+    :type commandObj: object
     :return: bool 
     """
 
@@ -43,6 +44,7 @@ class IDataRepository():
                         Its type depends on the query 
                         type expected by the target date 
                         repository abstraction
+    :type queryObj: object
     :return: List of results
     """
 

@@ -5,13 +5,20 @@ class IException(Exception):
     """
     Custom exception interface
     """
+    @abstractmethod
+    def SetLog(self, logging: ILogging): raise NotImplementedError
+    """
+    Set a log object to enable logging within IException implementation
+
+    :param logging: Logging object to inject
+    :type logging: ILogging
+    """
 
     @abstractmethod
-    def Log(self, loggingObj: ILogging): raise NotImplementedError
+    def Log(self): raise NotImplementedError
     """
     Logs the error through a log object
 
-    :param loggingObj: Object to use to perfom logging
     :return: None
     """
 

@@ -12,6 +12,7 @@ class ILogging():
     Sets a repository in order to use within logging process
 
     :param repository: A repository object
+    :type repository: IDataRepository
     """
 
     @abstractmethod
@@ -20,5 +21,6 @@ class ILogging():
     Performs log operation
 
     :param messagem: A message to log
+    :type message: str
     """
     pass
