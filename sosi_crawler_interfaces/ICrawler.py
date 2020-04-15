@@ -1,21 +1,18 @@
-from abc import ABC, abstractmethod, abstractproperty
-from sosi_crawler_interfaces.IDataRepository import IDataRepository
-from sosi_crawler_interfaces.IConfiguration import IConfiguration
-from sosi_crawler_interfaces.IException import IException
-from sosi_crawler_interfaces.ILogging import ILogging
-from sosi_crawler_interfaces.IApiController import IApiController
+from abc import ABC, abstractmethod, abstractproperty, ABCMeta
+from sosi_crawler_interfaces.ICrawlingResult import ICrawlingResult
 
 class ICrawler():
     """
     Interface that rules the commom operation for any crawler inside SoSI's architecture
     """
 
-    def SetDataRepository(self, dataRepo: IDataRepository): raise NotImplementedError
-    def SetConfiguration(self, config: IConfiguration): raise NotImplementedError
-    def SetException(self, ex: IException): raise NotImplementedError
-    def SetLogging(self, log: ILogging): raise NotImplementedError
-    def SetApiController(self, controller: IApiController): raise NotImplementedError
+    @abstractmethod
+    def Execute(self, args: dict) -> ICrawlingResult: raise NotImplementedError
+    """
+    Main method for a crawling object
 
-    def DataRepository(self) -> IDataRepository: raise NotImplementedError
+    :param args: Set of arguments needed to run the crawler object
+    :type args: dict
+    """
 
     pass
