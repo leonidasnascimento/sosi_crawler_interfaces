@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod, abstractproperty
 from sosi_crawler_interfaces.ILogging import ILogging
 
-class IException(Exception):
+class IException(Exception, ABC):
     """
     Custom exception interface
     """

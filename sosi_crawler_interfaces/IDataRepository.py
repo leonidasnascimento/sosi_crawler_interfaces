@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod, abstractproperty
-class IDataRepository():
+class IDataRepository(ABC):
     """
     Commom interface that describes a Data Repository class operarion
     """

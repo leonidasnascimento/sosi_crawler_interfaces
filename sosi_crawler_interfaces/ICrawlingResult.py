@@ -1,5 +1,8 @@
-from abc import abstractmethod
-class ICrawlingResult():
+from abc import abstractmethod, ABC
+class ICrawlingResult(ABC):
+    """
+    Interface that rules how a crawler must opperate unde SoSI's architecture
+    """
     @abstractmethod
     def SetMessage(self, message: str): raise NotImplementedError
     """

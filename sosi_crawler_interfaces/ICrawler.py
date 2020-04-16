@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod, abstractproperty, ABCMeta
 from sosi_crawler_interfaces.ICrawlingResult import ICrawlingResult
 
-class ICrawler():
+class ICrawler(ABC):
     """
     Interface that rules the commom operation for any crawler inside SoSI's architecture
     """

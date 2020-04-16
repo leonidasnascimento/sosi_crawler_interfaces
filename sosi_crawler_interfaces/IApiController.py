@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod, abstractproperty
 
-class IApiController():
+class IApiController(ABC):
     """
     Base interface responsible to standardize a common behavior of an API controller
     """

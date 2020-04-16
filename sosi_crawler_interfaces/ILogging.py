@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod, abstractproperty
 from sosi_crawler_interfaces.IDataRepository import IDataRepository 
 
-class ILogging():
+class ILogging(ABC):
     """
     Logging interface
     """

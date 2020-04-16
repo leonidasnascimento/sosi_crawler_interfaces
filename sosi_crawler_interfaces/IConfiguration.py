@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod, abstractproperty
 
-class IConfiguration():
+class IConfiguration(ABC):
     """
     Commom interface that describes a configuration class operarion
     """
