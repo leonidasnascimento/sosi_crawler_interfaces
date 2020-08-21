@@ -1,26 +1,27 @@
 from abc import ABC, abstractmethod, abstractproperty
 
-class IException(Exception, ABC):
+class IException(ABC):
     """
     Custom exception interface. 
     This interface was created to enable concrete implementations to pass forward the exception so it can be treated somehow
     
     It enables a method either to get an 'native' exception or to raise a custom excption by calling the method 'RaiseCustomException(...)'
     """
-    @abstractmethod
-    def GetExceptionMessage(self) -> str: raise NotImplementedError
-    """
-    Gets a custom error message from the exception
 
+    @abstractmethod
+    def ManageException(self, ex: Exception, raiseException: bool) -> str: raise NotImplementedError
+    """
+    Manages a given exception. 
+    The exception managing pipeline should be the following:
+
+    1 - Log the error into some SoSI's error logging mechanism
+    2 - Raise Exception?   
+        2.1 - Y: Raises the same exception with a default message stating it was safely logged
+        2.2 - N: Return a default message stating it was safely logged
+
+    :param ex: The current exception
+    :type ex: Exception
+    :param raiseException: The current exception
+    :type raiseException: bool
     :return: str
-    """
-
-    @abstractmethod
-    def RaiseCustomException(self, message: str): raise NotImplementedError
-    """
-    Raises a custom excption. 
-    Before raisingthe exception, the pipeline will be followed in order to pass forward the error so it can be treated somehow
-
-    :param message: A custom message to be raised as excpetion
-    :type message: str
     """
