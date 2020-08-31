@@ -9,7 +9,7 @@ class IException(ABC):
     """
 
     @abstractmethod
-    def ManageException(self, ex: Exception, raiseException: bool) -> str: raise NotImplementedError
+    def ManageException(self, ex: Exception, raise_exception: bool) -> str: raise NotImplementedError
     """
     Manages a given exception. 
     The exception managing pipeline should be the following:
@@ -21,7 +21,7 @@ class IException(ABC):
 
     :param ex: The current exception
     :type ex: Exception
-    :param raiseException: The current exception
-    :type raiseException: bool
+    :param raise_exception: The current exception
+    :type raise_exception: bool
     :return: str
     """

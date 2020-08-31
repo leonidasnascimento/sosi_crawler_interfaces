@@ -53,5 +53,3 @@ class ICrawlingResult(ABC):
 
     :return: bool
     """
-    
-    pass

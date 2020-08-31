@@ -14,5 +14,3 @@ class ICrawler(ABC):
     :param args: Set of arguments needed to run the crawler object
     :type args: dict
     """
-
-    pass

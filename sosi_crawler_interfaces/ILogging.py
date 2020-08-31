@@ -23,4 +23,3 @@ class ILogging(ABC):
     :param messagem: A message to log
     :type message: str
     """
-    pass

@@ -148,5 +148,3 @@ class IApiController(ABC):
 
     :return: str
     """
-
-    pass

@@ -22,29 +22,29 @@ class IDataRepository(ABC):
     """
 
     @abstractmethod
-    def ExecuteCommand(self, commandObj: object) -> bool: raise NotImplementedError
+    def ExecuteCommand(self, command_obj: object) -> bool: raise NotImplementedError
     """
     Execute a given commend against the data repository
 
-    :param commandObj:  Represents a command object. 
+    :param command_obj:  Represents a command object. 
                         Its type depends on the command 
                         type expected by the target date 
                         repository abstraction
-    :type commandObj: object
+    :type command_obj: object
     :return: bool 
     """
 
     @abstractmethod
-    def ExecuteQuery(self, queryObj: object) -> []: raise NotImplementedError
+    def ExecuteQuery(self, query_obj: object) -> []: raise NotImplementedError
     """
     Execute a given query against the data repository.
     The query is expected to return some result, otherwise a blank list will be returned
 
-    :param queryObj:    Represents a query object. 
+    :param query_obj:    Represents a query object. 
                         Its type depends on the query 
                         type expected by the target date 
                         repository abstraction
-    :type queryObj: object
+    :type query_obj: object
     :return: List of results
     """
 
@@ -53,5 +53,3 @@ class IDataRepository(ABC):
     """
     Shows whether the connection to the data repository is both active & open or not
     """
-
-    pass
