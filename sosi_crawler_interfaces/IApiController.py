@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod, abstractproperty
+from typing import Optional
 
 class IApiController(ABC):
     """
@@ -6,7 +7,7 @@ class IApiController(ABC):
     """
 
     @abstractmethod
-    def Post(self, url: str, header: object, data: object, param: object) -> str: raise NotImplementedError
+    def Post(self, url: str, header: object, data: object, param: Optional[object]) -> str: raise NotImplementedError
     """
     Post data to an URL
 
@@ -18,13 +19,13 @@ class IApiController(ABC):
     :type url: str
     :type header: object
     :type data: object
-    :type param: object
+    :type param: Optional[object]
 
     :return: str
     """
 
     @abstractmethod
-    async def PostAssync(self, url: str, header: object, data: object, param: object): raise NotImplementedError
+    async def PostAsync(self, url: str, header: object, data: object, param: Optional[object]): raise NotImplementedError
     """
     Post data to an URL
 
@@ -36,13 +37,13 @@ class IApiController(ABC):
     :type url: str
     :type header: object
     :type data: object
-    :type param: object
+    :type param: Optional[object]
 
     :return: str
     """
 
     @abstractmethod
-    def Get(self, url: str, header: object, data: object, param: object) -> str: raise NotImplementedError
+    def Get(self, url: str, header: object, data: object, param: Optional[object]) -> str: raise NotImplementedError
     """
     Get data from an URL
 
@@ -54,13 +55,13 @@ class IApiController(ABC):
     :type url: str
     :type header: object
     :type data: object
-    :type param: object
+    :type param: Optional[object]
 
     :return: str
     """
 
     @abstractmethod
-    async def GetAsync(self, url: str, header: object, data: object, param: object) -> str: raise NotImplementedError
+    async def GetAsync(self, url: str, header: object, data: object, param: Optional[object]) -> str: raise NotImplementedError
     """
     Get data to an URL
 
@@ -72,13 +73,13 @@ class IApiController(ABC):
     :type url: str
     :type header: object
     :type data: object
-    :type param: object
+    :type param: Optional[object]
 
     :return: str
     """
 
     @abstractmethod
-    def Put(self, url: str, header: object, data: object, param: object) -> str: raise NotImplementedError
+    def Put(self, url: str, header: object, data: object, param: Optional[object]) -> str: raise NotImplementedError
     """
     Put some data to an URL
 
@@ -90,13 +91,13 @@ class IApiController(ABC):
     :type url: str
     :type header: object
     :type data: object
-    :type param: object
+    :type param: Optional[object]
 
     :return: str
     """
 
     @abstractmethod
-    async def PutAsync(self, url: str, header: object, data: object, param: object) -> str: raise NotImplementedError
+    async def PutAsync(self, url: str, header: object, data: object, param: Optional[object]) -> str: raise NotImplementedError
     """
     Put some data to an URL
 
@@ -108,13 +109,13 @@ class IApiController(ABC):
     :type url: str
     :type header: object
     :type data: object
-    :type param: object
+    :type param: Optional[object]
 
     :return: str
     """
 
     @abstractmethod
-    def Delete(self, url: str, header: object, data: object, param: object) -> str: raise NotImplementedError
+    def Delete(self, url: str, header: object, data: object, param: Optional[object]) -> str: raise NotImplementedError
     """
     Delete data present into a repository (URL)
 
@@ -126,13 +127,13 @@ class IApiController(ABC):
     :type url: str
     :type header: object
     :type data: object
-    :type param: object
+    :type param: Optional[object]
 
     :return: str
     """
 
     @abstractmethod
-    async def DeleteAsync(self, url: str, header: object, data: object, param: object) -> str: raise NotImplementedError
+    async def DeleteAsync(self, url: str, header: object, data: object, param: Optional[object]) -> str: raise NotImplementedError
     """
     Delete data present into a repository (URL)
 
@@ -144,7 +145,7 @@ class IApiController(ABC):
     :type url: str
     :type header: object
     :type data: object
-    :type param: object
+    :type param: Optional[object]
 
     :return: str
     """
