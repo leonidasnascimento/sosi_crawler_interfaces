@@ -4,7 +4,7 @@ class ICrawlingResult(ABC):
     Interface that rules how a crawler must opperate unde SoSI's architecture
     """
     @abstractmethod
-    def SetMessage(self, message: str): raise NotImplementedError
+    def set_message(self, message: str): raise NotImplementedError
     """
     Sets a message as crawling result
 
@@ -13,7 +13,7 @@ class ICrawlingResult(ABC):
     """
 
     @abstractmethod
-    def SetObject(self, obj: dict): raise NotImplementedError
+    def set_object(self, obj: dict): raise NotImplementedError
     """
     Sets an object as crawling result
 
@@ -22,7 +22,7 @@ class ICrawlingResult(ABC):
     """
     
     @abstractmethod
-    def SetCrawlingStatus(self, status: bool): raise NotImplementedError
+    def set_crawlingStatus(self, status: bool): raise NotImplementedError
     """
     Sets the status of crawling process
 
@@ -31,7 +31,7 @@ class ICrawlingResult(ABC):
     """
 
     @abstractmethod
-    def GetMessage(self) -> str: raise NotImplementedError
+    def get_message(self) -> str: raise NotImplementedError
     """
     Gets the message of crawling process
 
@@ -39,7 +39,7 @@ class ICrawlingResult(ABC):
     """
     
     @abstractmethod
-    def GetObject(self) -> dict: raise NotImplementedError
+    def get_object(self) -> dict: raise NotImplementedError
     """
     Gets the object resulting from crawling process
 
@@ -47,7 +47,7 @@ class ICrawlingResult(ABC):
     """
 
     @abstractmethod
-    def GetCrawlingStatus(self) -> bool: raise NotImplementedError
+    def get_crawling_status(self) -> bool: raise NotImplementedError
     """
     Gets the status of crawling process
 

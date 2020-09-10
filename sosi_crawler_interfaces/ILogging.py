@@ -7,7 +7,7 @@ class ILogging(ABC):
     """
     
     @abstractmethod
-    def SetRepository(self, repository: IDataRepository): raise NotImplementedError
+    def set_repository(self, repository: IDataRepository): raise NotImplementedError
     """
     Sets a repository in order to use within logging process
 
@@ -16,7 +16,7 @@ class ILogging(ABC):
     """
 
     @abstractmethod
-    def Log(self, message: str): raise NotImplementedError
+    def log(self, message: str): raise NotImplementedError
     """
     Performs log operation
 

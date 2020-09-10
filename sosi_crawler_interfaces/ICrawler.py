@@ -7,7 +7,7 @@ class ICrawler(ABC):
     """
 
     @abstractmethod
-    def Execute(self, args: dict) -> ICrawlingResult: raise NotImplementedError
+    def execute(self, args: dict) -> ICrawlingResult: raise NotImplementedError
     """
     Main method for a crawling object
 

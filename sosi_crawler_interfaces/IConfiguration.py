@@ -6,7 +6,7 @@ class IConfiguration(ABC):
     """
     
     @abstractmethod
-    def Load(self, file_path: str, section_name: str): raise NotImplementedError
+    def load(self, file_path: str, section_name: str): raise NotImplementedError
     """
     Loads in memory a configuration section from a given file path. 
     It's only accepted a JSON file as configuration file
@@ -19,7 +19,7 @@ class IConfiguration(ABC):
     """
 
     @abstractmethod
-    def Read(self, field: str, default_value: str) -> str: raise NotImplementedError
+    def read(self, field: str, default_value: str) -> str: raise NotImplementedError
     """
     Read a field value within the in-memory configuration section.
     If either field or value are not found, the default value will be returned.

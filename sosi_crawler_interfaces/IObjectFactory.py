@@ -10,7 +10,7 @@ class IObjectFactory(ABC):
     """ 
 
     @abstractmethod
-    def AddDependency(self, target_crawler: str, interface: Generic[InterfaceType], concrete_class: Generic[ConcreteClassType]): raise NotImplementedError
+    def add_dependency(self, target_crawler: str, interface: Generic[InterfaceType], concrete_class: Generic[ConcreteClassType]): raise NotImplementedError
     """
     Add a generic type accoding to a given interface & crawler alias
 
@@ -23,7 +23,7 @@ class IObjectFactory(ABC):
     """
 
     @abstractmethod
-    def LoadDependencies(self, file_path: str): raise NotImplementedError
+    def load_dependencies(self, file_path: str): raise NotImplementedError
     """
     Load the dependencies that were predefined for SoSI's crawlers
 
@@ -32,7 +32,7 @@ class IObjectFactory(ABC):
     """
 
     @abstractmethod
-    def GetInstance(self, target_crawler: str, interface: Generic[InterfaceType]) -> InterfaceType: raise NotImplementedError
+    def get_instance(self, target_crawler: str, interface: Generic[InterfaceType]) -> InterfaceType: raise NotImplementedError
     """
     Create an instance of a generic type accoding to a given interface & crawler alias
 

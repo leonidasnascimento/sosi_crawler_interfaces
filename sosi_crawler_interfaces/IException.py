@@ -9,7 +9,7 @@ class IException(ABC):
     """
 
     @abstractmethod
-    def ManageException(self, ex: Exception, raise_exception: bool) -> str: raise NotImplementedError
+    def manage_exception(self, ex: Exception, raise_exception: bool) -> str: raise NotImplementedError
     """
     Manages a given exception. 
     The exception managing pipeline should be the following:
