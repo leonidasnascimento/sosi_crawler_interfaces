@@ -11,14 +11,14 @@ class ILogging(ABC):
     def __init__(self):
         self.__repository = None
 
-    @abstractmethod
-    def set_repository(self, repository: IDataRepository): raise NotImplementedError
-    """
-    Sets a repository in order to use within logging process
+    def set_repository(self, repository: IDataRepository):
+        """
+        Sets a repository in order to use within logging process
 
-    :param repository: A repository object
-    :type repository: IDataRepository
-    """
+        :param repository: A repository object
+        :type repository: IDataRepository
+        """
+        self.__repository = repository
 
     @abstractmethod
     def _log_pipeline(self, message: str): raise NotImplementedError
