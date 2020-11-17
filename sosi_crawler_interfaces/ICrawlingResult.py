@@ -3,53 +3,46 @@ class ICrawlingResult(ABC):
     """
     Interface that rules how a crawler must opperate unde SoSI's architecture
     """
-    @abstractmethod
-    def set_message(self, message: str): raise NotImplementedError
-    """
-    Sets a message as crawling result
 
-    :param message: The message to be set
-    :type message: str
-    """
-
-    @abstractmethod
-    def set_object(self, obj: dict): raise NotImplementedError
-    """
-    Sets an object as crawling result
-
-    :param obj: The object to be set
-    :type obj: dict
-    """
+    __message: str
+    __success: bool
+    __object: dict    
     
-    @abstractmethod
-    def set_crawlingStatus(self, status: bool): raise NotImplementedError
-    """
-    Sets the status of crawling process
+    def __init__(self, message: str, success: bool, obj: dict):
+        """
+        Initialize the object
 
-    :param status: The status 
-    :type status: bool
-    """
+        :param message: The message to be set
+        :type message: str
+        :param obj: The object to be set
+        :type obj: dict
+        :param success: The status 
+        :type success: bool
+        """
+        self.__message = message
+        self.__success = success
+        self.__object = obj
 
-    @abstractmethod
-    def get_message(self) -> str: raise NotImplementedError
-    """
-    Gets the message of crawling process
+    def get_message(self) -> str:
+        """
+        Gets the message of crawling process
 
-    :return: str
-    """
+        :return: str
+        """
+        return self.__message
     
-    @abstractmethod
-    def get_object(self) -> dict: raise NotImplementedError
-    """
-    Gets the object resulting from crawling process
+    def get_object(self) -> dict: 
+        """
+        Gets the object resulting from crawling process
 
-    :return: dict
-    """
+        :return: dict
+        """
+        return self.__object
 
-    @abstractmethod
-    def get_crawling_status(self) -> bool: raise NotImplementedError
-    """
-    Gets the status of crawling process
+    def get_crawling_status(self) -> bool: 
+        """
+        Gets the status of crawling process. Wether success or not
 
-    :return: bool
-    """
+        :return: bool
+        """
+        return self.__success
