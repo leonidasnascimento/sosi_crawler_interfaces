@@ -3,14 +3,21 @@ class ICrawlingResult(ABC):
     """
     Interface that rules how a crawler must opperate unde SoSI's architecture
     """
-
     __message: str
     __success: bool
     __object: dict    
     
-    def __init__(self, message: str, success: bool, obj: dict):
+    def __init__(self):
         """
-        Initialize the object
+        Creates an intance of the class
+        """
+        self.__message = ""
+        self.__success = False
+        self.__object = None
+
+    def set_result(self, message: str, success: bool, obj: dict):
+        """
+        Sets the Crawling result
 
         :param message: The message to be set
         :type message: str
