@@ -19,7 +19,7 @@ class IConfiguration(ABC):
     """
 
     @abstractmethod
-    def read(self, field: str, default_value: str) -> str: raise NotImplementedError
+    def read(self, field: str, default_value: str = None) -> str: raise NotImplementedError
     """
     Read a field value within the in-memory configuration section.
     If either field or value are not found, the default value will be returned.
@@ -28,5 +28,6 @@ class IConfiguration(ABC):
     :param defaultValue: Default value to be returned in case either field or value are not present 
     :type field: str
     :type default_value: str
+    :default default_value: None
     :return: str
     """
