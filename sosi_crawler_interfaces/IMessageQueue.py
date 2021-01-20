@@ -1,5 +1,4 @@
 from abc import abstractmethod, ABC
-from typing import Generic, TypeVar
 
 class IMessageQueue(ABC):
     """
